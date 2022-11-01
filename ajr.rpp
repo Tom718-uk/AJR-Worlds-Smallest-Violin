@@ -1,0 +1,841 @@
+<REAPER_PROJECT 0.1 "6.69/win64" 1667321023
+  TITLE "Trombone Champ charting template"
+  <NOTES 1 1
+    |Template for creating custom charts for Trombone Champ in MIDI.
+    |IF CLOSED YOU CAN OPEN THIS WINDOW AGAIN BY CLICKING ON THE ( i ) SYMBOL IN THE TOP LEFT
+    |
+    |0. Optional, but to make things more convenient you can go to Options -> Preferences -> Project and set Reaper to load up this project as default whenever a new project is created.
+    |        If you do this, do not change this file any further and instead create a new project.
+    |
+    |1. There's an example midi file showing the full note range Trombone Champ uses. C3 - C5 for reference. The notes one above and below that can be used as well.
+    |        You can quickly create new MIDI Objects yourself by using Ctrl+drag on an empty track.
+    |        Double click a MIDI object to open the editor window. You can place notes by double clicking in the editor window.
+    |
+    |2. Set the BPM and Time Signature and insert the desired song. Trombone Champ only supports whole numbers and no tempo changes.
+    |        Changing BPM after the song is already imported will time stretch the song. If that happens, double click the Object and set the playback rate back to 1.
+    |        Sometimes songs can drift out of sync over time. You can stretch an Object by using Alt+drag on either edge of it to make sure the beats all align from start to finish. Though only do it for minor adjustments.
+    |        Export the song either by going to "File -> Render" or pressing Ctrl+Alt+R. The proper settings should all be taken care of already. The audio will be exported as song.ogg and normalized to -15dB LUFS to make sure the volume of the music is balanced with the volume of the trombone.
+    |              !! Before exporting, make sure the Chart track is muted (the [M] button next to the volume levels or else it will also be audible in the final export.
+    |
+    |3. After you have the audio set up you can start to transcribe the music.
+    |        Make sure the notes are aligned with the grid, Trombone Champ doesn't like it if it's not.
+    |        Make sure to leave a gap inbetween notes so people have time to lift their finger before playing the next note.
+    |        Connected notes will become slides. But be aware the playback sound here is far from accurate. It's just here to illustrate the existence of a slide. In the game, the slide will start right from the beginning of the note and end at the beginning of the next note. If you want a note to be held for a bit before sliding you can vertically split the note at the cursor position by pressing S. For any non slide note please leave enough of a gap inbetween them so people are able to lift their fingers before pressing a new button.
+    |        If notes are out of range try moving the offending notes or sections up or down an octave (Alt+2 or 8 on numpad). This will change the pitch while keeping the general notes the same. Transposing the notes by anything else than an octave will change the notes and harmony and unless you know what you're doing musically it will sound wrong.
+    |        To export the MIDI file, open the editor and go to "File -> Export to New MIDI File..." or in the main window "File -> Export Project MIDI...".
+    |                I prefer the former because it only exports the one MIDI Object currently open. The latter will export the whole project as MIDI.
+    |                Make sure the MIDI ends BEFORE the music does. Otherwise Trombone Champ will softlock at playback end.
+    |
+    |Other useful notes:
+    |Ctrl+drag on a selection of Objects or MIDI notes copies them.
+    |Alt+drag on an Object will move it's contents without moving the object itself.
+    |Shift+drag on Objects or notes will disable grid snapping while moving them.
+    |Alt+click on notes deletes them. Rightclick on notes will open a context menu with more options.
+    |Rightclick+drag will select items in the selection region. Holding Shift will add new items to the current selection. Holding Ctrl will both add unselected items as well as unselect any already selected items in the region.
+    |In the bottom part of the midi editor window you can find a variety of grid settings. The leftmost 2 boxes are the most important ones for editing as they determine the grid size. "straight" will subdivide a beat by 2 and "triplet" by three. Swing will likely result in unquantized notes and is not supported by TC.
+    |        All the way to the right in the corner is the channel selection. Make sure all your notes are in channel 1 for best compability. Though personally I like putting slides on channel 2 to distinghuish them better, but if you do that make sure the converter you're using supports that.
+    |
+    |Shortcuts already mentioned but listed more conveniently:
+    |Alt+2/8 (numpad): Shift selected notes by an octave (in midi editor window)
+    |Ctrl+drag: Quick duplicates the selected items.
+    |Ctrl+Altl+R: Opens the render/export window
+    |S will vertically split all selected objects and notes at the cursor position. If none are selected, every item in the window will be split.
+    |
+    |For better readability, I recommend copypasting everything in this textbox into a proper text editor/viewer. The notes window really isn't ideal for this, I just use it because it is there and can be set up to automatically show you all the info as soon as you open the file.
+  >
+  RIPPLE 0
+  GROUPOVERRIDE 0 0 0
+  AUTOXFADE 129
+  ENVATTACH 1
+  POOLEDENVATTACH 0
+  MIXERUIFLAGS 11 48
+  PEAKGAIN 1
+  FEEDBACK 0
+  PANLAW 1
+  PROJOFFS 0 -1 0
+  MAXPROJLEN 0 600
+  GRID 3199 8 0.5 8 1 0 0 0
+  TIMEMODE 1 5 -1 30 0 0 -1
+  VIDEO_CONFIG 0 0 256
+  PANMODE 3
+  CURSOR 0.60779289806764
+  ZOOM 50.72053021187376 0 0
+  VZOOMEX 21 99
+  USE_REC_CFG 0
+  RECMODE 1
+  SMPTESYNC 0 30 100 40 1000 300 0 0 1 0 0
+  LOOP 0
+  LOOPGRAN 0 4
+  RECORD_PATH "" ""
+  <RECORD_CFG
+    ZXZhdxgoAA==
+  >
+  <APPLYFX_CFG
+  >
+  RENDER_FILE ""
+  RENDER_PATTERN song22
+  RENDER_FMT 0 2 44100
+  RENDER_1X 0
+  RENDER_RANGE 1 0 0 18 2000
+  RENDER_RESAMPLE 3 0 1
+  RENDER_ADDTOPROJ 0
+  RENDER_STEMS 0
+  RENDER_DITHER 0
+  RENDER_NORMALIZE 65 0.177828 1 0 0 1 1
+  TIMELOCKMODE 1
+  TEMPOENVLOCKMODE 1
+  ITEMMIX 0
+  DEFPITCHMODE 589824 0
+  TAKELANE 1
+  SAMPLERATE 44100 0 0
+  <RENDER_CFG
+    dmdnbwAAAD8AgAAAAIAAAAAgAAAAAAEAAA==
+  >
+  LOCK 1
+  <METRONOME 6 2
+    VOL 0.154803 0.074485
+    FREQ 800 1600 1
+    BEATLEN 4
+    SAMPLES "E:\Kreativ\Musik\Samples\Audio\Misc\White Noise Sample-long.wav" "E:\Kreativ\Musik\Samples\Audio\Misc\White Noise Sample-short.wav"
+    PATTERN 2863311530 2863311529
+    MULT 1
+  >
+  GLOBAL_AUTO -1
+  TEMPO 120 4 4
+  PLAYRATE 1 0 0.25 4
+  SELECTION 20.3125 20.375
+  SELECTION2 20.3125 20.375
+  MASTERAUTOMODE 0
+  MASTERTRACKHEIGHT 0 0
+  MASTERPEAKCOL 16576
+  MASTERMUTESOLO 0
+  MASTERTRACKVIEW 1 0.6667 0.5 0.5 -1 -1 -1 0 0 0 0 0 0
+  MASTERHWOUT 0 0 1 0 0 0 0 -1
+  MASTER_NCH 2 2
+  MASTER_VOLUME 1 0 -1 -1 1
+  MASTER_FX 1
+  MASTER_SEL 0
+  <MASTERFXLIST
+    WNDRECT 24 52 2135 1200
+    SHOW 0
+    LASTSEL 0
+    DOCKED 0
+  >
+  <MASTERPLAYSPEEDENV
+    EGUID {C77841EE-9302-4FFC-B40A-2B6A41F7CC31}
+    ACT 0 -1
+    VIS 0 1 1
+    LANEHEIGHT 0 0
+    ARM 0
+    DEFSHAPE 0 -1 -1
+  >
+  <TEMPOENVEX
+    EGUID {A69E741B-566E-40F2-9FE3-9A7F200EC8E8}
+    ACT 0 -1
+    VIS 1 0 1
+    LANEHEIGHT 0 0
+    ARM 0
+    DEFSHAPE 1 -1 -1
+  >
+  <PROJBAY
+  >
+  <TRACK {11D0F64B-2EB6-4001-9B68-E3CD4D1B770A}
+    NAME Song
+    PEAKCOL 16576
+    BEAT -1
+    AUTOMODE 0
+    VOLPAN 0.60115247317422 0 -1 -1 1
+    MUTESOLO 0 0 0
+    IPHASE 0
+    PLAYOFFS 0 1
+    ISBUS 0 0
+    BUSCOMP 0 0 0 0 0
+    SHOWINMIX 1 0.6667 0.5 1 0.5 0 -1 0
+    SEL 1
+    REC 0 0 1 0 0 0 0 0
+    VU 2
+    TRACKHEIGHT 0 0 0 0 0 0
+    INQ 0 0 0 0.5 100 0 0 100
+    NCHAN 2
+    FX 1
+    TRACKID {11D0F64B-2EB6-4001-9B68-E3CD4D1B770A}
+    PERF 0
+    MIDIOUT -1
+    MAINSEND 1 0
+    <FXCHAIN
+      WNDRECT 24 52 2135 1200
+      SHOW 0
+      LASTSEL 0
+      DOCKED 0
+    >
+    <ITEM
+      POSITION 0
+      SNAPOFFS 0
+      LENGTH 20.3125
+      LOOP 0
+      ALLTAKES 0
+      FADEIN 1 0.01 0 1 0 0 0
+      FADEOUT 1 0.01 0 1 0 0 0
+      MUTE 0 0
+      SEL 0
+      IGUID {68C62B8D-1480-4638-A5C9-BBA3A093A952}
+      IID 4
+      NAME song.mp3
+      VOLPAN 1 0 1 -1
+      SOFFS 0
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID {C8B94C99-B9BA-4D79-BE3B-039B06C12EE5}
+      <SOURCE MP3
+        FILE "song.mp3" 1
+      >
+    >
+    <ITEM
+      POSITION 20.3125
+      SNAPOFFS 0
+      LENGTH 0.0625
+      LOOP 0
+      ALLTAKES 0
+      FADEIN 1 0.01 0 1 0 0 0
+      FADEOUT 1 0.01 0 1 0 0 0
+      MUTE 0 0
+      SEL 0
+      IGUID {704A0897-581B-4020-AA11-03A3207A70A9}
+      IID 4
+      NAME song.mp3
+      VOLPAN 1 0 1 -1
+      SOFFS 20.3125
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID {907EE6DA-9454-48D9-85C4-D179C164B42D}
+      <SOURCE MP3
+        FILE "song.mp3" 1
+      >
+    >
+    <ITEM
+      POSITION 20.375
+      SNAPOFFS 0
+      LENGTH 160.875
+      LOOP 0
+      ALLTAKES 0
+      FADEIN 1 0.01 0 1 0 0 0
+      FADEOUT 1 0.01 0 1 0 0 0
+      MUTE 0 0
+      SEL 0
+      IGUID {E4F41911-DDB4-4FBA-BD98-CCE93CB60D17}
+      IID 4
+      NAME song.mp3
+      VOLPAN 1 0 1 -1
+      SOFFS 20.375
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID {A2508B29-BF76-4B4A-84CD-5A33572C28F0}
+      <SOURCE MP3
+        FILE "song.mp3" 1
+      >
+    >
+  >
+  <TRACK {0E685A3D-C76A-4577-B029-C1F3DB91F67E}
+    NAME Chart
+    PEAKCOL 16576
+    BEAT -1
+    AUTOMODE 0
+    VOLPAN 1.51029054812145 0 -1 -1 1
+    MUTESOLO 0 0 0
+    IPHASE 0
+    PLAYOFFS 0 1
+    ISBUS 0 0
+    BUSCOMP 0 0 0 0 0
+    SHOWINMIX 1 0.6667 0.5 1 0.5 0 -1 0
+    SEL 0
+    REC 0 0 1 0 0 0 0 0
+    VU 2
+    TRACKHEIGHT 0 0 0 0 0 0
+    INQ 0 0 0 0.5 100 0 0 100
+    NCHAN 2
+    FX 1
+    TRACKID {0E685A3D-C76A-4577-B029-C1F3DB91F67E}
+    PERF 0
+    MIDIOUT -1
+    MAINSEND 1 0
+    <FXCHAIN
+      WNDRECT 1144 538 570 508
+      SHOW 0
+      LASTSEL 0
+      DOCKED 0
+      BYPASS 0 0 0
+      <VST "VSTi: ReaSynth (Cockos)" reasynth.dll 0 "" 1919251321<5653547265737972656173796E746800> ""
+        eXNlcu9e7f4AAAAAAgAAAAEAAAAAAAAAAgAAAAAAAABEAAAAAAAAAAAAEAA=
+        776t3g3wrd5vEgM9UkmdO3e+3z5/ajw+mpnZPhqqtT7pZ4g9AAAAAAAAAD8AAIA/SOG6PgAAAD8AAAAAppvEPAAAAAA=
+        AFByb2dyYW0gMQAQAAAA
+      >
+      FLOATPOS 0 0 0 0
+      FXID {04DA35D3-A0B1-4D17-B718-74F3DA70ED29}
+      WAK 0 0
+    >
+    <ITEM
+      POSITION 0
+      SNAPOFFS 0
+      LENGTH 180.25
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0 0 1 0 0 0
+      FADEOUT 1 0 0 1 0 0 0
+      MUTE 0 0
+      SEL 0
+      IGUID {365DCA63-E5A7-47F7-8CF7-55EBB8A7BFA6}
+      IID 2
+      NAME "Example MIDI Object"
+      VOLPAN 1 0 1 -1
+      SOFFS 0 0
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID {9EFEA3E2-E8EF-4C5A-94FA-995EE9BF92F4}
+      <SOURCE MIDI
+        HASDATA 1 960 QN
+        CCINTERP 128
+        POOLEDEVTS {1B41572E-C418-4C92-8472-7990F4CD78D3}
+        E 2880 90 48 7f
+        E 7680 80 48 00
+        E 120 90 3c 7f
+        E 600 80 3c 00
+        E 3360 90 39 7f
+        E 600 80 39 00
+        E 3360 90 3e 7f
+        E 720 80 3e 00
+        E 3240 90 37 7f
+        E 1080 90 39 7f
+        E 120 80 37 00
+        E 840 90 3a 7f
+        E 120 80 39 00
+        E 840 90 3c 7f
+        E 120 80 3a 00
+        E 720 80 3c 00
+        E 120 90 35 7f
+        E 480 80 35 00
+        E 3480 90 39 7f
+        E 600 80 39 00
+        E 3480 90 3e 7f
+        E 600 80 3e 00
+        E 3240 90 37 7f
+        E 960 80 37 00
+        E 0 90 39 7f
+        E 1080 80 39 00
+        E 0 90 3a 7f
+        E 960 80 3a 00
+        E 0 90 3c 7f
+        E 840 80 3c 00
+        E 240 90 3e 7f
+        E 360 80 3e 00
+        E 120 90 3e 7f
+        E 360 80 3e 00
+        E 120 90 3e 7f
+        E 360 80 3e 00
+        E 2640 90 3c 7f
+        E 360 80 3c 00
+        E 120 90 3c 7f
+        E 360 80 3c 00
+        E 120 90 3c 7f
+        E 360 80 3c 00
+        E 2520 90 3a 7f
+        E 480 80 3a 00
+        E 240 90 3a 7f
+        E 120 80 3a 00
+        E 120 90 3a 7f
+        E 360 80 3a 00
+        E 240 90 3a 7f
+        E 360 80 3a 00
+        E 120 90 3a 7f
+        E 360 80 3a 00
+        E 120 90 3a 7f
+        E 360 80 3a 00
+        E 240 90 3c 7f
+        E 240 80 3c 00
+        E 240 90 3a 7f
+        E 240 80 3a 00
+        E 360 90 39 7f
+        E 960 90 3a 7f
+        E 360 80 39 00
+        E 600 90 3c 7f
+        E 120 80 3a 00
+        E 720 80 3c 00
+        E 840 90 37 7f
+        E 120 80 37 00
+        E 120 90 37 7f
+        E 360 80 37 00
+        E 132 90 37 7f
+        E 360 80 37 00
+        E 132 90 37 7f
+        E 360 80 37 00
+        E 96 90 37 7f
+        E 360 80 37 00
+        E 120 90 37 7f
+        E 480 80 37 00
+        E 120 90 37 7f
+        E 360 80 37 00
+        E 120 90 39 7f
+        E 480 90 37 7f
+        E 120 80 39 00
+        E 360 80 37 00
+        E 0 90 35 7f
+        E 1080 90 37 7f
+        E 240 80 35 00
+        E 720 90 39 7f
+        E 600 80 37 00
+        E 960 80 39 00
+        E 360 90 3b 7f
+        E 480 80 3b 00
+        E 120 90 3b 7f
+        E 360 80 3b 00
+        E 120 90 3b 7f
+        E 360 80 3b 00
+        E 120 90 3b 7f
+        E 360 80 3b 00
+        E 120 90 3b 7f
+        E 360 80 3b 00
+        E 120 90 3b 7f
+        E 360 80 3b 00
+        E 120 90 3c 7f
+        E 360 80 3c 00
+        E 120 90 3e 7f
+        E 360 80 3e 00
+        E 240 90 40 7f
+        E 360 80 40 00
+        E 0 90 3e 7f
+        E 240 90 3c 7f
+        E 120 80 3e 00
+        E 840 80 3c 00
+        E 1800 90 3c 7f
+        E 360 80 3c 00
+        E 149 90 3c 7f
+        E 730 80 3c 00
+        E 191 90 3c 7f
+        E 543 80 3c 00 67
+        E 0 90 3c 7f
+        E 360 80 3c 00
+        E 187 90 3c 7f
+        E 480 80 3c 00
+        E 0 90 3a 7f
+        E 240 90 39 7f
+        E 120 80 3a 00
+        E 480 80 39 00
+        E 720 90 3c 7f
+        E 360 80 3c 00
+        E 101 90 3c 7f
+        E 360 80 3c 00
+        E 139 90 3c 7f
+        E 360 80 3c 00
+        E 120 90 3c 7f
+        E 360 80 3c 00
+        E 120 90 3c 7f
+        E 446 90 3a 7f
+        E 34 80 3c 00
+        E 240 90 39 7f
+        E 86 80 3a 00
+        E 634 80 39 00
+        E 120 90 3c 7f
+        E 360 90 3e 7f
+        E 120 80 3c 00
+        E 539 80 3e 00
+        E 61 90 41 7f
+        E 360 80 41 00
+        E 120 90 41 7f
+        E 360 80 41 00
+        E 58 90 3e 7f
+        E 360 80 3e 00
+        E 57 90 41 7f
+        E 377 80 41 00
+        E 60 90 3e 7f
+        E 523 80 3e 00
+        E 63 90 41 7f
+        E 360 80 41 00
+        E 120 90 43 7f
+        E 654 90 45 7f
+        E 186 80 43 00
+        E 1680 80 45 00
+        E 1502 90 45 7f
+        E 480 90 43 7f
+        E 120 80 45 00
+        E 360 90 41 7f
+        E 120 80 43 00
+        E 120 80 41 00
+        E 120 90 3e 7f
+        E 480 80 3e 00
+        E 120 90 41 7f
+        E 360 80 41 00
+        E 120 90 43 7f
+        E 360 80 43 00
+        E 120 90 41 7f
+        E 240 80 41 00
+        E 120 90 41 7f
+        E 240 80 41 00
+        E 480 90 43 7f
+        E 360 80 43 00
+        E 120 90 45 7f
+        E 480 80 45 00
+        E 120 90 41 7f
+        E 240 80 41 00
+        E 120 90 41 7f
+        E 360 80 41 00
+        E 120 90 41 7f
+        E 240 80 41 00
+        E 240 90 45 7f
+        E 360 80 45 00
+        E 120 90 41 7f
+        E 240 80 41 00
+        E 120 90 41 7f
+        E 240 80 41 00
+        E 480 90 45 7f
+        E 360 80 45 00
+        E 120 90 45 7f
+        E 360 80 45 00
+        E 120 90 41 7f
+        E 360 80 41 00
+        E 120 90 41 7f
+        E 360 80 41 00
+        E 120 90 45 7f
+        E 360 80 45 00
+        E 240 90 45 7f
+        E 360 80 45 00
+        E 120 90 41 7f
+        E 240 80 41 00
+        E 120 90 41 7f
+        E 240 80 41 00
+        E 120 90 41 7f
+        E 360 80 41 00
+        E 360 90 41 7f
+        E 720 80 41 00
+        E 194 90 41 7f
+        E 720 80 41 00
+        E 240 90 41 7f
+        E 720 80 41 00
+        E 240 90 41 7f
+        E 720 80 41 00
+        E 8446 90 3a 7f
+        E 240 80 3a 00
+        E 240 90 3a 7f
+        E 240 80 3a 00
+        E 240 90 3a 7f
+        E 240 80 3a 00
+        E 240 90 3a 7f
+        E 240 80 3a 00
+        E 240 90 3a 7f
+        E 240 80 3a 00
+        E 0 90 39 7f
+        E 720 80 39 00
+        E 0 90 3c 7f
+        E 360 80 3c 00
+        E 120 90 3a 7f
+        E 240 80 3a 00
+        E 240 90 39 7f
+        E 720 80 39 00
+        E 240 90 39 7f
+        E 720 80 39 00
+        E 240 90 39 7f
+        E 720 80 39 00
+        E 240 90 39 7f
+        E 720 80 39 00
+        E 14880 90 39 7f
+        E 1440 90 3c 7f
+        E 600 80 39 00
+        E 1800 80 3c 00
+        E 480 90 35 7f
+        E 960 90 39 7f
+        E 1080 80 35 00
+        E 1320 80 39 00
+        E 720 90 35 7f
+        E 960 90 3a 7f
+        E 600 80 35 00
+        E 1920 80 3a 00
+        E 1560 90 37 7f
+        E 840 80 37 00
+        E 0 90 39 7f
+        E 960 80 39 00
+        E 0 90 3a 7f
+        E 1200 90 3c 7f
+        E 240 80 3a 00
+        E 840 80 3c 00
+        E 2400 90 35 7f
+        E 1440 90 39 7f
+        E 600 80 35 00
+        E 1800 80 39 00
+        E 600 90 35 7f
+        E 720 90 3a 7f
+        E 840 80 35 00
+        E 1680 80 3a 00
+        E 1800 90 37 7f
+        E 840 80 37 00
+        E 0 90 39 7f
+        E 960 80 39 00
+        E 0 90 3a 7f
+        E 1080 90 3c 7f
+        E 360 80 3a 00
+        E 720 80 3c 00
+        E 0 90 3e 7f
+        E 360 80 3e 00
+        E 120 90 3e 7f
+        E 360 80 3e 00
+        E 120 90 3e 7f
+        E 360 80 3e 00
+        E 2640 90 3c 7f
+        E 360 80 3c 00
+        E 120 90 3c 7f
+        E 360 80 3c 00
+        E 120 90 3c 7f
+        E 360 80 3c 00
+        E 2520 90 3a 7f
+        E 480 80 3a 00
+        E 240 90 3a 7f
+        E 120 80 3a 00
+        E 120 90 3a 7f
+        E 360 80 3a 00
+        E 240 90 3a 7f
+        E 360 80 3a 00
+        E 120 90 3a 7f
+        E 360 80 3a 00
+        E 120 90 3a 7f
+        E 360 80 3a 00
+        E 240 90 3c 7f
+        E 240 80 3c 00
+        E 240 90 3a 7f
+        E 240 80 3a 00
+        E 360 90 39 7f
+        E 960 90 3a 7f
+        E 360 80 39 00
+        E 600 90 3c 7f
+        E 120 80 3a 00
+        E 720 80 3c 00
+        E 840 90 37 7f
+        E 120 80 37 00
+        E 120 90 37 7f
+        E 360 80 37 00
+        E 132 90 37 7f
+        E 360 80 37 00
+        E 132 90 37 7f
+        E 360 80 37 00
+        E 96 90 37 7f
+        E 360 80 37 00
+        E 120 90 37 7f
+        E 480 80 37 00
+        E 120 90 37 7f
+        E 360 80 37 00
+        E 120 90 39 7f
+        E 480 90 37 7f
+        E 120 80 39 00
+        E 360 80 37 00
+        E 0 90 35 7f
+        E 1080 90 37 7f
+        E 240 80 35 00
+        E 720 90 39 7f
+        E 600 80 37 00
+        E 960 80 39 00
+        E 360 90 3b 7f
+        E 480 80 3b 00
+        E 120 90 3b 7f
+        E 360 80 3b 00
+        E 120 90 3b 7f
+        E 360 80 3b 00
+        E 120 90 3b 7f
+        E 360 80 3b 00
+        E 120 90 3b 7f
+        E 360 80 3b 00
+        E 120 90 3b 7f
+        E 360 80 3b 00
+        E 120 90 3c 7f
+        E 360 80 3c 00
+        E 120 90 3e 7f
+        E 360 80 3e 00
+        E 240 90 40 7f
+        E 360 80 40 00
+        E 0 90 3e 7f
+        E 240 90 3c 7f
+        E 120 80 3e 00
+        E 840 80 3c 00
+        E 1678 90 3c 7f
+        E 360 80 3c 00
+        E 149 90 3c 7f
+        E 730 80 3c 00
+        E 191 90 3c 7f
+        E 543 80 3c 00
+        E 0 90 3c 7f
+        E 360 80 3c 00
+        E 187 90 3c 7f
+        E 480 80 3c 00
+        E 0 90 3a 7f
+        E 240 90 39 7f
+        E 120 80 3a 00
+        E 480 80 39 00
+        E 720 90 3c 7f
+        E 360 80 3c 00
+        E 101 90 3c 7f
+        E 360 80 3c 00
+        E 139 90 3c 7f
+        E 360 80 3c 00
+        E 120 90 3c 7f
+        E 360 80 3c 00
+        E 120 90 3c 7f
+        E 446 90 3a 7f
+        E 34 80 3c 00
+        E 240 90 39 7f
+        E 86 80 3a 00
+        E 634 80 39 00
+        E 120 90 3c 7f
+        E 360 90 3e 7f
+        E 120 80 3c 00
+        E 539 80 3e 00
+        E 61 90 41 7f
+        E 360 80 41 00
+        E 120 90 41 7f
+        E 360 80 41 00
+        E 58 90 3e 7f
+        E 360 80 3e 00
+        E 57 90 41 7f
+        E 377 80 41 00
+        E 60 90 3e 7f
+        E 523 80 3e 00
+        E 63 90 41 7f
+        E 360 80 41 00
+        E 120 90 43 7f
+        E 654 90 45 7f
+        E 186 80 43 00
+        E 1680 80 45 00
+        E 1624 90 45 7f
+        E 480 90 43 7f
+        E 120 80 45 00
+        E 360 90 41 7f
+        E 120 80 43 00
+        E 120 80 41 00
+        E 120 90 3e 7f
+        E 480 80 3e 00
+        E 120 90 41 7f
+        E 360 80 41 00
+        E 120 90 43 7f
+        E 360 80 43 00
+        E 120 90 41 7f
+        E 240 80 41 00
+        E 120 90 41 7f
+        E 240 80 41 00
+        E 480 90 43 7f
+        E 360 80 43 00
+        E 120 90 45 7f
+        E 480 80 45 00
+        E 120 90 41 7f
+        E 240 80 41 00
+        E 120 90 41 7f
+        E 360 80 41 00
+        E 120 90 41 7f
+        E 240 80 41 00
+        E 240 90 45 7f
+        E 360 80 45 00
+        E 120 90 41 7f
+        E 240 80 41 00
+        E 120 90 41 7f
+        E 240 80 41 00
+        E 480 90 45 7f
+        E 360 80 45 00
+        E 120 90 45 7f
+        E 360 80 45 00
+        E 120 90 41 7f
+        E 360 80 41 00
+        E 120 90 41 7f
+        E 360 80 41 00
+        E 120 90 45 7f
+        E 360 80 45 00
+        E 240 90 45 7f
+        E 360 80 45 00
+        E 120 90 41 7f
+        E 240 80 41 00
+        E 120 90 41 7f
+        E 240 80 41 00
+        E 120 90 41 7f
+        E 360 80 41 00
+        E 360 90 41 7f
+        E 720 80 41 00
+        E 194 90 41 7f
+        E 720 80 41 00
+        E 240 90 41 7f
+        E 720 80 41 00
+        E 240 90 41 7f
+        E 720 80 41 00
+        E 64966 90 35 7f
+        E 840 80 35 00
+        E 1560 90 30 7f
+        E 840 80 30 00
+        E 1560 90 35 7f
+        E 840 80 35 00
+        E 1475 90 39 7f
+        E 840 80 39 00
+        E 1525 90 3a 7f
+        E 840 80 3a 00
+        E 1200 90 3b 7f
+        E 720 80 3b 00
+        E 1080 90 41 7f
+        E 720 80 41 00
+        E 960 90 3e 7f
+        E 840 80 3e 00
+        E 960 90 3a 7f
+        E 840 80 3a 00
+        E 600 90 3b 7f
+        E 1080 80 3b 00
+        E 480 90 41 7f
+        E 960 80 41 00
+        E 720 90 3e 7f
+        E 1560 80 3e 00
+        E 240 90 3a 7f
+        E 1080 80 3a 00
+        E 360 90 3b 7f
+        E 1080 80 3b 00
+        E 600 90 41 7f
+        E 960 80 41 00
+        E 480 90 3e 7f
+        E 840 80 3e 00
+        E 600 90 3a 7f
+        E 960 80 3a 00
+        E 480 90 3b 7f
+        E 960 80 3b 00
+        E 480 90 41 7f
+        E 960 80 41 00
+        E 480 90 3e 7f
+        E 840 80 3e 00
+        E 600 90 3a 7f
+        E 960 80 3a 00
+        E 480 90 3b 7f
+        E 960 80 3b 00
+        E 480 90 41 7f
+        E 960 80 41 00
+        E 480 90 3e 7f
+        E 840 80 3e 00
+        E 240 90 45 7f
+        E 960 80 45 00
+        E 0 90 43 7f
+        E 840 90 41 7f
+        E 120 80 43 00
+        E 720 80 41 00
+        E 15 90 45 7f
+        E 465 80 45 00
+        E 120 90 45 7f
+        E 465 80 45 00
+        E 135 90 41 7f
+        E 705 80 41 00
+        E 135 90 41 7f
+        E 480 80 41 00
+        E 120 90 41 7f
+        E 360 80 41 00
+        E 240 90 41 7f
+        E 1800 80 41 00
+        E 63480 b0 7b 00
+        CCINTERP 128
+        CHASE_CC_TAKEOFFS 1
+        GUID {33713180-90DD-46A2-B016-31EF7941B4BB}
+        IGNTEMPO 0 120 4 4
+        SRCCOLOR 767
+        VELLANE -1 197 0
+        CFGEDITVIEW 0 0.006946 15 6 0 -1 0 0 0 0.5
+        KEYSNAP 0
+        TRACKSEL 252
+        EVTFILTER 0 -1 -1 -1 -1 0 0 0 0 -1 -1 -1 -1 0 -1 0 -1 -1
+        CFGEDIT 1 1 0 1 0 0 1 0 1 1 1 0.125 -1892 248 -92 1327 0 0 0 1 0 0 0 0 0 0.5 1 0 1 64
+      >
+    >
+  >
+>
