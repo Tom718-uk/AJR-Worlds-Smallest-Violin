@@ -1,5 +1,7 @@
 -- Created by Tom
+
 -- AJR - World's Smallest Violin Trombone Champ Custom Chart
+
 
 Hey there. Sorry about the quality, I think this is good enough to publish. This is my first attempt at a custom chart, as I have seen this song requested. 
 
